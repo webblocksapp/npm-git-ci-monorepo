@@ -1,7 +1,8 @@
 import type { Component } from 'solid-js';
+import { helloWorldFn } from 'webblocksapp-ci-demo-lib';
 
 const App: Component = () => {
-  return <div>Hello world</div>;
+  return <div>{helloWorldFn()}</div>;
 };
 
 export default App;

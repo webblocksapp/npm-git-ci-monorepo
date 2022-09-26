@@ -6,7 +6,9 @@
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "link-lib": "yarn link webblocksapp-ci-demo-lib",
+    "unlink-lib": "yarn unlink webblocksapp-ci-demo-lib"
   },
   "license": "MIT",
   "devDependencies": {

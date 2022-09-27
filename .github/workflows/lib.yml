@@ -11,7 +11,7 @@ on:
     paths:
       - ./packages/lib/**
   release:
-    types: [created]
+    types: [published]
     branches:
       - main
 defaults:
@@ -28,3 +28,6 @@ jobs:
         uses: ./.github/workflows/actions/setup-node
       - name: 'Build and test'
         uses: ./.github/workflows/actions/lib-build-and-test
+      - name: 'Publish to npm'
+        if: github.event_name == 'release'
+        uses: ./.github/workflows/actions/lib-publish-to-npm

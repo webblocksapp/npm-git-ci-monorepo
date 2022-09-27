@@ -2,7 +2,7 @@ name: Deployment
 on:
   push:
     paths:
-      - 'packages/lib'
+      - 'packages/lib/**'
 defaults:
   run:
     working-directory: packages/lib

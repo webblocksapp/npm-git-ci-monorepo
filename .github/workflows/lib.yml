@@ -12,6 +12,6 @@ jobs:
     name: 'Lib workflow'
     steps:
       - name: 'Initial config'
-        uses: ./.github/workflows/actions/lib/initial-config.yml@{SHA/TAG/BRANCH}
+        uses: ./.github/workflows/actions/lib/initial-config.yml
       - name: 'Build and test'
-        uses: ./.github/workflows/actions/lib/build-and-test.yml@{SHA/TAG/BRANCH}
+        uses: ./.github/workflows/actions/lib/build-and-test.yml

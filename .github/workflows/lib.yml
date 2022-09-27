@@ -7,13 +7,13 @@ on:
       - packages/lib/**
   push:
     branches:
-      - main
+      - master
     paths:
       - packages/lib/**
   release:
     types: [published]
     branches:
-      - main
+      - master
 defaults:
   run:
     working-directory: packages/lib

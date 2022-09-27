@@ -11,7 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     name: 'Lib workflow'
     steps:
-      - name: 'Initial config'
-        uses: ./.github/workflows/actions/lib/initial-config.yml
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
       - name: 'Build and test'
         uses: ./.github/workflows/actions/lib/build-and-test.yml

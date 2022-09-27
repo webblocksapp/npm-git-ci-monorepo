@@ -2,4 +2,4 @@ name: Build and test lib
 on: 'push'
 jobs:
   calls-lib-build-and-test:
-    uses: ./.github/workflows/lib/build-and-test.yml@master
+    uses: .github/workflows/lib/build-and-test.yml@master

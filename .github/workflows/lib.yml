@@ -1,0 +1,13 @@
+name: Build and test lib
+on:
+  push:
+    paths:
+      - 'packages/lib/**'
+defaults:
+  run:
+    working-directory: packages/lib
+jobs:
+  initial-config:
+    uses: .github/workflows/actions/lib/initial-config.yml@{SHA/TAG/BRANCH}
+  build-and-test:
+    uses: .github/workflows/actions/lib/build-and-test.yml@{SHA/TAG/BRANCH}

@@ -1,10 +1,13 @@
 name: Deployment
-on: push
+on:
+  push:
+    paths:
+      - 'packages/lib'
 defaults:
   run:
     working-directory: packages/lib
 jobs:
-  build:
+  BuildAndTest:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

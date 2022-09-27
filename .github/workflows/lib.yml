@@ -1,19 +1,10 @@
 name: Build and test lib
 on:
-  pull_request:
-    branches:
-      - '*'
-    paths:
-      - ./packages/lib/**
   push:
     branches:
       - main
     paths:
       - ./packages/lib/**
-  release:
-    types: [published]
-    branches:
-      - main
 defaults:
   run:
     working-directory: packages/lib

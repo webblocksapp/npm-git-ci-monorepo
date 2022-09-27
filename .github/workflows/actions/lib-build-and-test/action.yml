@@ -7,7 +7,7 @@ runs:
       run: yarn && yarn build
       shell: bash
       working-directory: ./packages/lib
-    - name: 'Tests'
+    - name: Tests
       run: yarn test
       shell: bash
       working-directory: ./packages/lib

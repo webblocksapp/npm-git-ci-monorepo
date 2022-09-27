@@ -1,3 +1,3 @@
 ## Demo npm lib
 
-Demo npm lib for testing CI.
+Demo npm lib for testing CI. Updated README.

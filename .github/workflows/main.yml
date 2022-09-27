@@ -12,7 +12,7 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - name: CD lib folder
-        run: cd packages/lib
+        run: cd packages/lib && ls
       - name: Install dependencies and build
         run: yarn
       - name: 'Build'

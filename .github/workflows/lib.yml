@@ -9,11 +9,11 @@ jobs:
     name: 'Lib workflow'
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - name: 'Build and test'
-        uses: ./.github/workflows/actions/build-and-test.yml@master
+        uses: ./.github/workflows/actions/lib/build-and-test.yml@master

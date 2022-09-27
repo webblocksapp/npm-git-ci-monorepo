@@ -11,7 +11,7 @@ on:
     paths:
       - ./packages/lib/**
   release:
-    types: [published]
+    types: [created]
     branches:
       - main
 defaults:

@@ -1,8 +1,5 @@
 name: Build and test lib
-on:
-  push:
-    paths:
-      - 'packages/lib/**'
+on: 'push'
 defaults:
   run:
     working-directory: packages/lib
@@ -19,4 +16,4 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - name: 'Build and test'
-        uses: ./.github/workflows/actions/build-and-test.yml
+        uses: ./.github/workflows/actions/build-and-test.yml@master

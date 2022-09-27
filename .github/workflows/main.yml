@@ -1,23 +1,5 @@
-name: Deployment
-on:
-  push:
-    paths:
-      - 'packages/lib/**'
-defaults:
-  run:
-    working-directory: packages/lib
+name: Build and test lib
+on: 'push'
 jobs:
-  BuildAndTest:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-          registry-url: 'https://registry.npmjs.org'
-      - name: Install dependencies and build
-        run: yarn && yarn build
-      - name: 'Tests'
-        run: yarn test
+  calls-lib-build-and-test:
+    uses: ./.github/workflows/lib/build-and-test.yml@master
